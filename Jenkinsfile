@@ -13,7 +13,7 @@ node('maven-label') {
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' clean install"
       } else {
-         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+         bat(/"${mvnHome}\bin\mvn" clean package/)
       }
    }
    stage('Results') {
